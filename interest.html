@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Interests Page</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <script src="js/registration.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="top">
+            <a class="logo" href="index.html">CapellaVolunteers<span class="dotcom">.org</span></a>
+        </div>
+        <nav>
+            <ul class="topnav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="invitation.html">Invitation</a></li>
+                <li><a href="volunteer.html">Volunteers</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="registration.html" class="active">Registration</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <footer>This events site is for IT3515 tasks.</footer>
+
+    <section id="pageFormContent"></section>
+
+    <script>
+        // Read and display form data from cookies
+        var userName = getCookie("userName");
+        var password = getCookie("password");
+        var passwordVerify = getCookie("passwordVerify");
+        var firstName = getCookie("firstName");
+        var lastName = getCookie("lastName");
+        var email = getCookie("email");
+        var phoneNumber = getCookie("phoneNumber");
+
+        // Display the data on the confirm.html page
+        document.getElementById("pageFormContent").innerHTML = `
+            <h2>Registration Confirmation</h2>
+            <p>Username: ${userName}</p>
+            <p>Password: ${password}</p>
+            <p>Password Verification: ${passwordVerify}</p>
+            <p>First Name: ${firstName}</p>
+            <p>Last Name: ${lastName}</p>
+            <p>Email: ${email}</p>
+            <p>Phone Number: ${phoneNumber}</p>
+        `;
+    </script>
+
+</body>
+
+</html>

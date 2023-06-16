@@ -4,6 +4,10 @@
 <head>
     <title>Invitation Page</title>
     <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <script type="text/javascript" src="js/validation.js"></script>
+    <script type="text/javascript" src="js/registration.js"></script>
+  
+
 </head>
 
 <body>
@@ -13,56 +17,55 @@
         </div>
         <nav>
             <ul class="topnav">
-                <li><a href="index.html">Home</a>
-                </li>
-                <li><a href="invitation.html">Invitation</a>
-                </li>
-				<li><a href="volunteer.html">Volunteers</a>
-                </li>
-                <li><a href="gallery.html">Gallery</a>
-                </li>
-                <li><a href="registration.html" class="active">Registration</a>
-                </li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="invitation.html">Invitation</a></li>
+                <li><a href="volunteer.html">Volunteers</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="registration.html" class="active">Registration</a></li>
             </ul>
-
         </nav>
     </header>
     <section id="pageForm">
-        <form action="#">
+        <form action="#" id="validateForm">
             <label for="userName">Username:</label>
             <input type="text" name="userName" placeholder="Enter your Username" />
+            <span id="userNameError"></span>
 
-            <label for="Password">Password:
-            </label>
+            <label for="password">Password:</label>
             <input type="password" name="password" placeholder="Enter your Password" />
+            <span id="passwordError"></span>
 
-            <label for="passwordVerify">Verify your Password:
-            </label>
-            <input type="password" name="passwordVerify" placeholder="Enter in your Password again" />
+            <label for="passwordVerify">Verify your Password:</label>
+            <input type="password" name="passwordVerify" placeholder="Enter your Password again" />
+            <span id="passwordVerifyError"></span>
 
-            <label for="firstName">First Name:
-            </label>
+            <label for="firstName">First Name:</label>
             <input type="text" name="firstName" placeholder="Enter your First Name" />
+            <span id="firstNameError"></span>
 
-            <label for="hostName">Last Name:
-            </label>
+            <label for="lastName">Last Name:</label>
             <input type="text" name="lastName" placeholder="Enter your Last Name" />
-            <label for="email">Email:
-            </label>
+            <span id="lastNameError"></span>
+
+            <label for="email">Email:</label>
             <input type="text" name="email" placeholder="Enter your Email Address" />
-			<label for="phoneNumber">Phone Number
-            </label>
-            <input type="text" name="lastName" placeholder="Enter your Phone Number" />
-			<label for="signUpNewsletter">Sign up for newsletter:
-            </label>
-			  <input type="radio" name="signUpNewsletter" value="Yes" checked> Yes 
-				<input type="radio" name="signUpNewsletter" value="No"> No
+            <span id="emailError"></span>
+
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="text" name="phoneNumber" placeholder="Enter your Phone Number" />
+            <span id="phoneNumberError"></span>
+
+            <label for="signUpNewsletter">Sign up for newsletter:</label>
+            <input type="radio" name="signUpNewsletter" value="Yes" checked> Yes
+            <input type="radio" name="signUpNewsletter" value="No"> No
+
             <input type="submit" value="Next step">
         </form>
+        
     </section>
 
-    <footer>This events site is for IT3515 tasks.
-    </footer>
+
+    <footer>This events site is for IT3515 tasks.</footer>
 </body>
 
 </html>
